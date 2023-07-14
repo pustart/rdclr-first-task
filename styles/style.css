@@ -49,12 +49,13 @@
 .about-text {
   flex-grow: 1;
   margin-top: -24px;
-  height: 500px;
+  max-height: 454px;
   background-color: var(--accent-color);
   border-radius: 24px 24px 0px 0px;
   padding: 40px 24px;
   position: relative;
   z-index: 1;
+  color: var(--white-color);
 }
 
 .red-arrow {
@@ -72,12 +73,14 @@
 }
 
 .text-block {
+  color: inherit;
   font-size: 20px;
   line-height: 24px;
 }
 
 .contacts {
   margin-top: 40px;
+  list-style: none;
 }
 
 .contact-link {
@@ -87,24 +90,12 @@
   margin-bottom: 20px;
 }
 
-.phone {
-  width: 19px;
-  height: 19px;
+.contact-link:hover {
+  color: var(--main-color);
 }
 
-.mail {
-  width: 20px;
-  height: 15px;
-}
-
-.telegram {
-  width: 23px;
-  height: 19px;
-}
-
-.github {
-  width: 22px;
-  height: 21px;
+.contact-link:hover svg {
+  fill: currentColor;
 }
 
 .info {
@@ -154,6 +145,7 @@
 }
 
 .text-wrapper {
+  width: 75%;
   letter-spacing: -0.01em;
 }
 
@@ -166,7 +158,18 @@
 }
 
 .skills {
+  width: 75%;
+  list-style: none;
   display: flex;
   column-gap: 33px;
   flex-wrap: wrap;
+}
+
+.site-link {
+  text-decoration: underline;
+}
+
+.site-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }

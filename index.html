@@ -5,96 +5,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/binder.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <title>Резюме</title>
+  <link rel="manifest" href="public/manifest.webmanifest">
+  <link rel="shortcut icon" href="public/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="public/favicons/apple-touch-icon.png">
+  <title>Artyom Pust CV</title>
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-      <img src="images/logo.svg" alt="Логотип">
+      <img src="public/images/logo.svg" alt="Логотип">
     </header>
 
     <section class="about">
       <div class="about-picture">
-        <img src="images/photo.jpg" class="photo" alt="Фото">
-        <img src="images/glasses.png" class="glasses" alt="Очки Red Collar">
+        <img src="public/images/photo.jpg" class="photo" alt="Фото">
+        <img src="public/images/glasses.png" class="glasses" alt="Очки Red Collar">
       </div>
       <div class="about-text">
-        <img src="images/red-arrow.svg" class="red-arrow" alt="Стрелка наверх">
+        <img src="public/images/red-arrow.svg" class="red-arrow" alt="Стрелка наверх">
         <h1 class="text-name">Пустовалов Артем</h1>
         <p class="text-block">21 год, Воронеж</p>
-        <div class="contacts">
-          <a href="tel:+79507649798" class="contact-link">
-            <img src="images/phone.png" class="phone" alt="Телефон">
-            <p class="text-block">+7 950 764 97 98</p>
-          </a>
-          <a href="mailto:simplyartempust@gmail.com" class="contact-link">
-            <img src="images/mail.png" class="mail" alt="Почта">
-            <p class="text-block">simplyartempust@gmail.com</p>
-          </a>
-          <a href="https://t.me/artempust" class="contact-link">
-            <img src="images/telegram.png" class="telegram" alt="Телеграм">
-            <p class="text-block">artempust</p>
-          </a>
-          <a href="https://github.com/pustart" class="contact-link">
-            <img src="images/github.png" class="github" alt="Гитхаб">
-            <p class="text-block">github.com/pustart</p>
-          </a>
-        </div>
+        <ul class="contacts">
+          <li>
+            <a href="tel:+79507649798" class="contact-link">
+              <svg class="phone" width="19" height="19" viewBox="0 0 19 19" fill="white"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.9475 3.07318C11.2466 3.77616 11.2466 4.91601 11.9475 5.619L13.2166 6.89191C13.4712 7.14728 13.7832 7.3099 14.1109 7.37978C14.4616 7.45456 14.7845 7.77059 14.6883 8.11626C14.2434 9.7154 13.3895 11.1703 12.2115 12.3365C11.0334 13.5028 9.57182 14.3401 7.97178 14.7653C7.683 14.842 7.42097 14.5757 7.37977 14.2796C7.32769 13.9054 7.15817 13.5445 6.87127 13.2568L5.60217 11.9838C4.90129 11.2808 3.76485 11.2808 3.06397 11.9838L0.525661 14.5297C-0.17522 15.2327 -0.17522 16.3726 0.525661 17.0755C1.0367 17.5881 1.52271 18.229 2.13983 18.6193C2.80193 19.0187 3.6668 18.9644 4.43948 18.99C5.71553 19.0323 7.70468 18.9469 8.98662 18.6062C11.2539 18.0036 13.3249 16.8171 14.9943 15.1645C16.6638 13.5119 17.8736 11.4504 18.5042 9.18437C18.9243 7.67415 19 6.36072 19 4.55509C19 3.65227 18.9873 2.76143 18.506 2.05708C18.4441 1.96664 18.3732 1.8806 18.2931 1.80026L17.024 0.52724C16.3231 -0.175747 15.1866 -0.175747 14.4858 0.52724L11.9475 3.07318Z" />
+                <path
+                  d="M8.03595 15.0069L8.03599 15.0069C9.67825 14.5705 11.1783 13.7111 12.3873 12.5142C13.5964 11.3173 14.4727 9.82427 14.9292 8.18328C15.0048 7.91133 14.9097 7.66223 14.7572 7.48393C14.607 7.30836 14.3891 7.18348 14.163 7.13527C13.8813 7.0752 13.6131 6.93552 13.3936 6.7154L12.1245 5.44249C11.5209 4.83707 11.5209 3.8551 12.1245 3.24969L14.6628 0.703751C15.266 0.0987497 16.2437 0.0987495 16.8469 0.703743L18.116 1.97677L18.1161 1.9768C18.1852 2.04618 18.2464 2.12033 18.2995 2.19813C18.7301 2.82816 18.75 3.63712 18.75 4.55509C18.75 6.35342 18.6743 7.63997 18.2633 9.11735C17.6444 11.3416 16.4569 13.3649 14.8184 14.9868L14.8184 14.9868C13.18 16.6088 11.1475 17.7732 8.92241 18.3646C7.67575 18.696 5.71538 18.7822 4.44776 18.7402C4.3222 18.736 4.19842 18.7339 4.07589 18.7318C3.80408 18.7271 3.53841 18.7226 3.27306 18.6961C2.89584 18.6583 2.55668 18.5781 2.2712 18.4066C1.98903 18.2277 1.73042 17.9876 1.47319 17.72C1.36972 17.6124 1.26047 17.4935 1.14978 17.3731C0.999814 17.21 0.847199 17.044 0.702702 16.899C0.0990993 16.2936 0.0990992 15.3116 0.702702 14.7062L3.24101 12.1603C3.8442 11.5553 4.82193 11.5553 5.42512 12.1603C5.42513 12.1603 5.42513 12.1603 5.42513 12.1603L6.69422 13.4333L6.69425 13.4333C6.94146 13.6812 7.08729 13.9917 7.13215 14.314C7.16082 14.52 7.26506 14.7154 7.41772 14.8498C7.57316 14.9867 7.79442 15.0711 8.03595 15.0069Z"
+                  stroke="white" stroke-opacity="0.3" stroke-width="0.5" />
+              </svg>
+              <p class="text-block">+7 950 764 97 98</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:simplyartempust@gmail.com" class="contact-link">
+              <svg class="mail" width="24" height="24" viewBox="0 0 24 24" fill="white"
+                xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-inside-1_64_824">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.00024 7.15124V16.0001C2.00024 17.6569 3.34339 19.0001 5.00024 19.0001H19.0002C20.6571 19.0001 22.0002 17.6569 22.0002 16.0001V7.15198L14.728 14.4242C13.2217 15.9305 10.7795 15.9305 9.2732 14.4242L2.00024 7.15124ZM21.5726 5.65083C21.5317 5.76205 21.4654 5.86854 21.3707 5.96323L13.8189 13.5151C12.8147 14.5193 11.1865 14.5193 10.1823 13.5151L2.63052 5.96323C2.53565 5.86837 2.46926 5.76168 2.4284 5.65024C2.88901 4.95697 3.67701 4.5 4.57174 4.5H19.4289C20.3239 4.5 21.1121 4.95722 21.5726 5.65083Z" />
+                </mask>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.00024 7.15124V16.0001C2.00024 17.6569 3.34339 19.0001 5.00024 19.0001H19.0002C20.6571 19.0001 22.0002 17.6569 22.0002 16.0001V7.15198L14.728 14.4242C13.2217 15.9305 10.7795 15.9305 9.2732 14.4242L2.00024 7.15124ZM21.5726 5.65083C21.5317 5.76205 21.4654 5.86854 21.3707 5.96323L13.8189 13.5151C12.8147 14.5193 11.1865 14.5193 10.1823 13.5151L2.63052 5.96323C2.53565 5.86837 2.46926 5.76168 2.4284 5.65024C2.88901 4.95697 3.67701 4.5 4.57174 4.5H19.4289C20.3239 4.5 21.1121 4.95722 21.5726 5.65083Z" />
+                <path
+                  d="M2.00024 7.15124L2.3538 6.79768L1.50024 5.94413V7.15124H2.00024ZM22.0002 7.15198H22.5002V5.94487L21.6467 6.79842L22.0002 7.15198ZM14.728 14.4242L15.0816 14.7777H15.0816L14.728 14.4242ZM9.2732 14.4242L8.91965 14.7777L9.2732 14.4242ZM21.3707 5.96323L21.7243 6.31679L21.7243 6.31678L21.3707 5.96323ZM21.5726 5.65083L22.0419 5.82331L22.1294 5.5854L21.9891 5.37425L21.5726 5.65083ZM13.8189 13.5151L13.4653 13.1615L13.8189 13.5151ZM10.1823 13.5151L9.82879 13.8686L10.1823 13.5151ZM2.63052 5.96323L2.98407 5.60968L2.98407 5.60968L2.63052 5.96323ZM2.4284 5.65024L2.01194 5.37354L1.87176 5.58453L1.95896 5.82236L2.4284 5.65024ZM2.50024 16.0001V7.15124H1.50024V16.0001H2.50024ZM5.00024 18.5001C3.61953 18.5001 2.50024 17.3808 2.50024 16.0001H1.50024C1.50024 17.9331 3.06725 19.5001 5.00024 19.5001V18.5001ZM19.0002 18.5001H5.00024V19.5001H19.0002V18.5001ZM21.5002 16.0001C21.5002 17.3808 20.381 18.5001 19.0002 18.5001V19.5001C20.9332 19.5001 22.5002 17.9331 22.5002 16.0001H21.5002ZM21.5002 7.15198V16.0001H22.5002V7.15198H21.5002ZM21.6467 6.79842L14.3745 14.0706L15.0816 14.7777L22.3538 7.50553L21.6467 6.79842ZM14.3745 14.0706C13.0634 15.3817 10.9378 15.3817 9.62675 14.0706L8.91965 14.7777C10.6212 16.4793 13.38 16.4793 15.0816 14.7777L14.3745 14.0706ZM9.62675 14.0706L2.3538 6.79768L1.64669 7.50479L8.91965 14.7777L9.62675 14.0706ZM21.7243 6.31678C21.8699 6.1712 21.9759 6.00305 22.0419 5.82331L21.1033 5.47835C21.0876 5.52106 21.061 5.56588 21.0172 5.60968L21.7243 6.31678ZM14.1724 13.8686L21.7243 6.31679L21.0172 5.60968L13.4653 13.1615L14.1724 13.8686ZM9.82879 13.8686C11.0283 15.0681 12.973 15.0681 14.1724 13.8686L13.4653 13.1615C12.6564 13.9704 11.3448 13.9704 10.5359 13.1615L9.82879 13.8686ZM2.27696 6.31679L9.82879 13.8686L10.5359 13.1615L2.98407 5.60968L2.27696 6.31679ZM1.95896 5.82236C2.02499 6.00245 2.13112 6.17094 2.27696 6.31679L2.98407 5.60968C2.94019 5.5658 2.91353 5.5209 2.89784 5.47812L1.95896 5.82236ZM4.57174 4C3.50255 4 2.56128 4.54673 2.01194 5.37354L2.84486 5.92694C3.21675 5.3672 3.85147 5 4.57174 5V4ZM19.4289 4H4.57174V5H19.4289V4ZM21.9891 5.37425C21.4399 4.54704 20.4984 4 19.4289 4V5C20.1494 5 20.7842 5.36741 21.1561 5.92741L21.9891 5.37425Z"
+                  fill-opacity="0.3" mask="url(#path-1-inside-1_64_824)" />
+              </svg>
+              <p class="text-block">simplyartempust@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/artempust" class="contact-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.0399 3.02469C21.0399 3.02469 23.1674 2.20226 22.9894 4.19942C22.9308 5.02185 22.3991 7.90061 21.9851 11.0139L20.5668 20.237C20.5668 20.237 20.4485 21.5881 19.3845 21.8232C18.321 22.0577 16.7253 21.0008 16.4296 20.7657C16.193 20.5893 11.9972 17.9456 10.5198 16.6536C10.1058 16.3007 9.63264 15.5961 10.5789 14.7737L16.7839 8.89892C17.4931 8.19429 18.2022 6.54944 15.2473 8.54661L6.97289 14.1272C6.97289 14.1272 6.02717 14.7151 4.25455 14.1863L0.412512 13.011C0.412512 13.011 -1.0058 12.13 1.41738 11.2489C7.32775 8.48798 14.5973 5.66839 21.0388 3.02469H21.0399Z" />
+              </svg>
+              <p class="text-block">artempust</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/pustart" class="contact-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 1C5.9225 1 1 5.8176 1 11.7656C1 16.5294 4.14875 20.553 8.52125 21.9794C9.07125 22.0736 9.2775 21.7507 9.2775 21.4681C9.2775 21.2124 9.26375 20.3646 9.26375 19.463C6.5 19.9609 5.785 18.8036 5.565 18.198C5.44125 17.8885 4.905 16.9331 4.4375 16.6774C4.0525 16.4755 3.5025 15.9776 4.42375 15.9642C5.29 15.9507 5.90875 16.7447 6.115 17.0676C7.105 18.6959 8.68625 18.2384 9.31875 17.9558C9.415 17.256 9.70375 16.785 10.02 16.5159C7.5725 16.2468 5.015 15.3182 5.015 11.2004C5.015 10.0296 5.44125 9.06073 6.1425 8.30714C6.0325 8.038 5.6475 6.93453 6.2525 5.45426C6.2525 5.45426 7.17375 5.17166 9.2775 6.55773C10.1575 6.31551 11.0925 6.19439 12.0275 6.19439C12.9625 6.19439 13.8975 6.31551 14.7775 6.55773C16.8813 5.15821 17.8025 5.45426 17.8025 5.45426C18.4075 6.93453 18.0225 8.038 17.9125 8.30714C18.6138 9.06073 19.04 10.0162 19.04 11.2004C19.04 15.3317 16.4688 16.2468 14.0213 16.5159C14.42 16.8523 14.7638 17.4983 14.7638 18.5075C14.7638 19.9474 14.75 21.1047 14.75 21.4681C14.75 21.7507 14.9563 22.0871 15.5063 21.9794C17.6901 21.2581 19.5877 19.8846 20.932 18.0524C22.2764 16.2201 22.9996 14.0213 23 11.7656C23 5.8176 18.0775 1 12 1Z" />
+              </svg>
+              <p class="text-block">github.com/pustart</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="info">
       <article class="description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt error quas,
-        pariatur accusantium obcaecati illo neque in, adipisci maiores, reiciendis inventore doloremque
-        quod dolorem magni culpa ratione molestiae porro esse? Obcaecati cupiditate non blanditiis dolores
-        eos excepturi nam, eius at perferendis quisquam voluptates, soluta quibusdam ab recusandae praesentium
-        ullam eaque ipsam! Inventore dignissimos velit quos veniam, ex molestiae laboriosam quaerat numquam quas,
-        enim fuga eum quibusdam officiis sed ipsa voluptatibus animi, commodi aspernatur eveniet voluptas itaque nihil!
+        Привет! Меня зовут Артём и я начинающий frontend разработчик.
+        Я люблю изучать различные технологии и применять их на практике для эффективного решения задач.
+        Обладаю уверенными знаниями HTML, CSS, JavaScript, Git, а также знаком с TypeScript.
+        Работал с такими инструментами, как React, Next.js, Redux Toolkit и Gulp.
+        Знаю как разработать фуллстек веб-приложение с нуля и довести его до релиза.
+        Слежу за современными трендами веб-разработки, большой фанат веб-стандартов.
+        Готов и дальше совершенствоваться в области веба, хочу работать с профессионалами своего дела.
+        Бодр, свеж и готов к деплою!
       </article>
 
       <div class="info-block">
-        <img src="images/black-arrow.svg" class="black-arrow" alt="Стрелка вниз">
+        <img src="public/images/black-arrow.svg" class="black-arrow" alt="Стрелка вниз">
         <div class="content">
           <h2 class="content-heading">Образование</h2>
           <div class="text-wrapper">
             <p class="block-title">Воронежский Государственный Университет</p>
-            <p class="block-text">Информационные системы и технологии</p>
-            <p class="block-text">2020-по настоящее время</p>
+            <p class="block-text">ФКН,
+              Информационные системы и технологии</p>
+            <p class="block-text">2020 - по настоящее время</p>
           </div>
         </div>
         <div class="divider"></div>
         <div class="content">
           <h2 class="content-heading">Проекты</h2>
           <div class="text-wrapper">
-            <p class="block-title">Первый проект</p>
-            <p class="block-text">Делал такое-то и такое-то</p>
-            <p class="block-text">2022-2023</p>
+            <p class="block-title">Переработка <a href="https://kuchp-math.ru/" target="_blank" class="site-link">сайта кафедры</a> КУЧП ВГУ</p>
+            <p class="block-text">
+              Реализовал перенос панели управления сайта с устаревшей CMS на Headless CMS Strapi. Разработал
+              абсолютно новую клиентскую часть на Next.js, что позволило добиться высоких показателей по ligthhouse (92/90/92/90).
+              Отвечал за сборку проекта при помощи docker-compose, реализовал автопродление SSL сертификатов
 
-            <p class="block-title">Второй проект</p>
-            <p class="block-text">Делал такое-то</p>
-            <p class="block-text">2023</p>
+
+            </p>
+            <p class="block-text">Май - июль 2023</p>
+
+            <p class="block-title">Сайт обмена вещей <a href="https://exchanger-frontend.onrender.com/" target="_blank" class="site-link">Exchanger</a></p>
+            <p class="block-text">Разработал клиент-серверное приложение на стеке TS, Nest.js, Swagger, PostgreSQL, Prisma ORM, Next.js, JS, Redux Toolkit.
+              Настроил CI/CD пайплайны как для frontend, так и для backend части: branch push - linting - testing - deploy
+            </p>
+            <p class="block-text">Июнь 2023</p>
+
+            <p class="block-title"><a href="https://production-moneypie.up.railway.app/api/docs" target="_blank" class="site-link">Сервер</a> на Nest.js для приложения контроля финансов
+            <p class="block-text">
+              Спроектировал MVC архитектуру серверной части, реализовал бизнес логику при помощи TS и Nest.js, а также Sequelize ORM в связке с PostgreSQL.
+              Хэширование паролей пользователей в БД, защита API при помощи Bearer tokens.
+              Используя Swagger, описал документацию всех API эндпоинтов
+            </p>
+            <p class="block-text">Апрель - май 2023</p>
           </div>
         </div>
         <div class="divider"></div>
         <div class="content">
           <h2 class="content-heading">Навыки</h2>
-          <div class="skills">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Javascript</p>
-            <p>Typescript</p>
-            <p>React</p>
-            <p>Next.js</p>
-            <p>Node.js</p>
-            <p>Nest.js</p>
-            <p>Docker</p>
-            <p>Gulp</p>
-            <p>Nginx</p>
-            <p>Redux</p>
-          </div>
+          <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+            <li>Nest.js</li>
+            <li>Docker</li>
+            <li>Gulp</li>
+            <li>Git</li>
+            <li>Swagger</li>
+            <li>Nginx</li>
+            <li>Redux</li>
+          </ul>
         </div>
       </div>
     </section>
