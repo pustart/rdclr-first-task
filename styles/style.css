@@ -28,6 +28,8 @@
 }
 
 .about-picture {
+  display: flex;
+  justify-content: center;
   height: 355px;
   position: relative;
 }
